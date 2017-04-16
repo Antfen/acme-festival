@@ -688,6 +688,12 @@ th {
   clear: both;
 }
 
+@media screen and (max-width: 700px) {
+  .layout-3col {
+    border: red 2px solid;
+  }
+}
+
 .layout-center {
   padding-left: 20px;
   padding-right: 20px;

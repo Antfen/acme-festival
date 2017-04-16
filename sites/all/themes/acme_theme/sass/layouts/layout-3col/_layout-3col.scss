@@ -160,3 +160,14 @@
     @include zen-grid-container($context: grid-item);
   }
 }
+
+@media screen and (max-width:700px) {
+
+  
+  
+  .layout-3col {
+    border: red 2px solid;
+  }
+ 
+ 
+}
