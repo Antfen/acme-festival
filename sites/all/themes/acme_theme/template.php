@@ -136,3 +136,23 @@ function acme_theme_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
+
+
+function acme_theme_preprocess_node_article(&$variables, $hook) {
+
+    // Optionally, run node-type-specific preprocess functions, like
+  // foo_preprocess_node_page() or foo_preprocess_node_story().
+  $function = __FUNCTION__ . '_' . $variables['node']->type;
+  if (function_exists($function)) {
+    $function($variables, $hook);
+  } 
+ 
+}
+
+//drupal_add_js(drupal_get_path('theme', 'acme-festival') . 'http://localhost/acme-festival/sites/all/modules/acme_glue/glue.js', array(
+    //'weight' => 10000, // Something higher than the weight of existing items
+    //'scope' => 'footer', // Make sure the script tag is rendered in the footer of the page, not the header
+    //'type' => 'file',
+    //'group' => JS_THEME,
+
+  //));

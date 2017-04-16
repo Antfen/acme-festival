@@ -1,5 +1,5 @@
 name = "ACME Dev"
-description = "Manage new dev stuff"
+description = "Manage node output"
 core = "7.x"
 version = "7.x-1.0"
 

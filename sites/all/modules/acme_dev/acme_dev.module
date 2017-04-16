@@ -1,41 +1,10 @@
 <?php
 
-function acme_dev_menu() {
-  $items['mypage-html-new'] = array(
-    'title' => 'My page with HTML style function',
-    'page callback' => 'acme_dev_html_page',
-    'access callback' => TRUE,
-  );
+function acme_dev_article_preprocess(&$variables) {
+  
 
-  $items['mypage-renderable-new'] = array(
-    'title' => 'My page with render array function',
-    'page callback' => 'acme_dev_renderable_page',
-    'access callback' => TRUE,
-  );
+  $variables['date'] = format_date($node->created);
 
-  return $items;
+
 }
 
-// Previous method (still works) of generating a page by returning HTML
-function acme_dev_html_page() {
-  $output = '<p>A paragraph about some stuff…</p>';
-  $output .= '<ul><li>first item</li><li>second item</li><li>third item</li></ul>';
-  return $output;
-}
-
-// New method of generating the render array and returning that.
-function acme_dev_renderable_page() {
-  $output = array(
-    'first_para' => array(
-      '#type' => 'markup',
-      '#markup' => '<p>A paragraph about some stuff…</p>',
-    ),
-    'second_para' => array(
-      '#items' => array('first item', 'second item', 'third item'),
-      '#theme' => 'item_list',
-    ),
-  );
-  return $output;
-}
-
-?>
