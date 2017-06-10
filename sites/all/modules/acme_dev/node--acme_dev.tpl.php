@@ -1,0 +1,1 @@
+<p>TESTER from Article module TPL</p>

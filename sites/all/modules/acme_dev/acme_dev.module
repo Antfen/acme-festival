@@ -4,6 +4,7 @@ function acme_dev_article_preprocess(&$variables) {
   
 
   $variables['date'] = format_date($node->created);
+  //some sort of variables here
 
 
 }

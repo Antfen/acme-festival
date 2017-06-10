@@ -1,13 +1,13 @@
 <?php
 
 function my_example_menu() {
-  $items['mypage-html'] = array(
+  $items['mypage-html-x'] = array(
     'title' => 'My page with HTML style function',
     'page callback' => 'my_example_html_page',
     'access callback' => TRUE,
   );
 
-  $items['mypage-renderable'] = array(
+  $items['mypage-renderable-x'] = array(
     'title' => 'My page with render array function',
     'page callback' => 'my_example_renderable_page',
     'access callback' => TRUE,
